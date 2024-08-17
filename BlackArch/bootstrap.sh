@@ -3,7 +3,8 @@
    echo ""
    echo "Installing BlackArch,."
    echo ""
-pacman -Syu
+pacman-key --init && pacman-key --populate
+pacman -Syu --noconfirm
 
 #Prepare Packages
 pacman -S dialog nano --noconfirm
@@ -18,7 +19,7 @@ chmod +x strap.sh ; ./strap.sh
 rm -rf /etc/os-release
 wget -q https://raw.githubusercontent.com/wahasa/Arch/main/BlackArch/os-release /etc/
 
-pacman -Syu
+pacman -Syu --noconfirm
   echo ""
   echo "installation completed"
   echo ""
