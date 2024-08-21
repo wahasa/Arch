@@ -9,6 +9,28 @@
 • Install Apps on Android
 - [x] [Termux](https://play.google.com/store/apps/details?id=com.termux)
 - [x] [Vnc Viewer](https://play.google.com/store/apps/details?id=com.realvnc.viewer.android)
+- [x] [Termux X11](https://github.com/termux/termux-x11/releases)
 
 ## Installation
+Copy and paste this commands to Termux
 > apt update
+
+#### Install Arch (Distro)
+> apt install proot-distro
+
+```
+proot-distro install archlinux
+```
+
+#### Install BlackArch
+In Arch, run this commands
+> pacman -Syu
+```
+pacman -S wget ; wget https://blackarch.org/strap.sh
+```
+
+- Login
+> proot-distro login archlinux
+- Logout
+> exit
+
