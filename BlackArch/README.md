@@ -45,7 +45,6 @@ pacman -Syyu
 
 ---
 <b> Commands package blackarch</b>
-
 - List all tools blackarch
 ```
 pacman -Sgg | grep blackarch | cut -d' ' -f2 | sort -u
@@ -62,5 +61,14 @@ pacman -S <name_tool>
 ```
 pacman -S blackarch-<category>
 ```
+
+---
+<b>Basic commands Arch</b>
+> pacman -Sy : Update list package.</br>
+> pacman -Syu : Upgrade package.</br>
+> pacman -Ss (pkg) : Search package.</br>
+> pacman -S (pkg) : Install package.</br>
+> pacman -R (pkg) : Delete pkg.</br>
+> pacman -h : Help all commands.
 
 ---
