@@ -21,7 +21,12 @@ Copy and paste this commands to Termux
 proot-distro install archlinux
 ```
 
-#### Install BlackArch
+- Login
+> proot-distro login archlinux
+- Logout
+> exit
+
+#### Install BlackArch (Add-repo)
 In Arch, run this commands
 > pacman -Syu
 
@@ -34,12 +39,13 @@ echo 26849980b35a42e6e192c6d9ed8c46f0d6d06047 strap.sh | sha1sum -c
 ```
 chmod +x strap.sh ; ./strap.sh
 ```
-
 ```
 pacman -Syyu
 ```
 
 ---
+<b> Commands package blackarch</b>
+
 - List all tools blackarch
 ```
 pacman -Sgg | grep blackarch | cut -d' ' -f2 | sort -u
@@ -58,8 +64,3 @@ pacman -S blackarch-<category>
 ```
 
 ---
-- Login
-> proot-distro login archlinux
-- Logout
-> exit
-
