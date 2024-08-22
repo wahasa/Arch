@@ -15,8 +15,8 @@ echo 26849980b35a42e6e192c6d9ed8c46f0d6d06047 strap.sh | sha1sum -c
 chmod +x strap.sh ; ./strap.sh
 
 #Extra Packages
-rm -rf /etc/os-release
-wget -q https://raw.githubusercontent.com/wahasa/Arch/main/BlackArch/os-release /etc/
+cp /etc/skel/.bashrc .
+echo "export PULSE_SERVER=127.0.0.1" >> ~/.bashrc
 
 pacman -Syu --noconfirm
 pacman -S neofetch --noconfirm
