@@ -30,7 +30,7 @@ apt install proot-distro -y ; proot-distro install archlinux
 
 ---
 #### Install BlackArch (Add-repo)
-In Arch, run this commands
+In Arch, run this command
 > pacman -Syu
 
 ```
@@ -69,29 +69,34 @@ pacman -S blackarch-<category>
 
 - Add Username
 - Fixed Sound Output
-- Install Desktop Arch
+
+<details>
+<summary><code><b>Install Desktop Arch</b></code></summary></br>
+
+In Arch, run this command
 > pacman -Syu
 
-Xfce Desktop
+- Xfce Desktop
 ```
 pacman -S xfce4 xfce4-goodies gst-libav firefox
 ```
-Lxde Desktop
+- Lxde Desktop
 ```
 pacman -S lxde firefox ; mv /usr/bin/lxpolkit /usr/bin/lxpolkit.bak
 ```
-Lxqt Desktop
+- Lxqt Desktop
 ```
 pacman -S lxqt firefox
 ```
-Kde- Desktop
+- Kde- Desktop
 ```
 pacman -S plasma firefox
 ```
-Mate Desktop
+- Mate Desktop
 ```
 pacman -S mate mate-extra firefox
 ```
+</details>
 
 <details>
 <summary><code><b>Install Applications</b></code></summary></br>
