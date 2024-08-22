@@ -29,14 +29,14 @@ SUPPORT_URL="https://blackarch.org/community.html"
 BUG_REPORT_URL="https://github.com/BlackArch/blackarch/issues"
 LOGO=blackarch-logo' > /etc/os-release
 
-pacman -Syu --noconfirm
+pacman -Syyu --noconfirm
 pacman -S neofetch --noconfirm
    echo ""
    echo "installation completed"
    echo ""
    sleep 3
    clear
-   echo "Commands package blackarch
+echo "Commands package blackarch
 - List All Tools BlackArch
 pacman -Sgg | grep blackarch | cut -d' ' -f2 | sort -u
 - List Categories BlackArch
