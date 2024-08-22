@@ -23,7 +23,7 @@ pacman -S neofetch --noconfirm
   echo ""
   echo "installation completed"
   echo ""
-  echo "Commands BlackArch
+  echo "Commands package blackarch
 - List All Tools BlackArch, run
 pacman -Sgg | grep blackarch | cut -d' ' -f2 | sort -u
 - List Categories BlackArch, run
