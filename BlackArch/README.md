@@ -93,39 +93,46 @@ Mate Desktop
 pacman -S mate mate-extra firefox
 ```
 
-- Install Applications
-Blender
+<details>
+<summary><code><b>Install Applications</b></code></summary></br>
+
+- Blender
 ```
 pacman -S blender
 ```
-Chromium
-```
-pacman -S chromium
-```
-Firefox
+- Firefox
 ```
 pacman -S firefox
 ```
-Gedit
+- Gedit
 ```
 pacman -S gedit
 ```
-GIMP
+- GIMP
 ```
 pacman -S gimp
 ```
-Inkscape
+- Inkscape
 ```
 pacman -S inkscape
 ```
-Lollypop
+- Kdenlive
+```
+pacman -S kdenlive
+```
+- Krita
+```
+pacman -S krita
+```
+- Lollypop
 ```
 pacman -S lollypop
 ```
-Thunderbird
+- Thunderbird
 ```
 pacman -S thunderbird
 ```
+</details>
 
 - Run VNC Viewer Android
 - Run Termux-x11 Android
