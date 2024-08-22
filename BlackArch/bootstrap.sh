@@ -17,6 +17,22 @@ chmod +x strap.sh ; ./strap.sh
 #Extra Packages
 cp /etc/skel/.bashrc .
 echo "export PULSE_SERVER=127.0.0.1" >> ~/.bashrc
+echo 'NAME="BlackArch Linux"
+PRETTY_NAME="BlackArch Linux"
+ID=blackarch
+ID_LIKE=arch
+BUILD_ID=rolling
+ANSI_COLOR="38;2;23;147;209"
+HOME_URL="https://archlinuxarm.org"
+DOCUMENTATION_URL="https://archlinuxarm.org/wiki"
+SUPPORT_URL="https://archlinuxarm.org/forum"
+BUG_REPORT_URL="https://github.com/archlinuxarm/PKGBUIL>
+LOGO=archlinux-logo
+HOME_URL="https://blackarch.org"
+DOCUMENTATION_URL="https://blackarch.wiki"
+SUPPORT_URL="https://blackarch.org/community.html"
+BUG_REPORT_URL="https://github.com/BlackArch/blackarch/>
+LOGO=blackarch-logo' > /etc/os-release
 
 pacman -Syu --noconfirm
 pacman -S neofetch --noconfirm
