@@ -5,7 +5,7 @@
    echo ""
 
 #Prepare Packages
-pacman-key --init && pacman-key --populate
+pacman-key --init ; pacman-key --populate
 pacman -Syu --noconfirm
 pacman -S dialog nano sudo --noconfirm
 
@@ -23,24 +23,19 @@ ID=blackarch
 ID_LIKE=arch
 BUILD_ID=rolling
 ANSI_COLOR="38;2;23;147;209"
-HOME_URL="https://archlinuxarm.org"
-DOCUMENTATION_URL="https://archlinuxarm.org/wiki"
-SUPPORT_URL="https://archlinuxarm.org/forum"
-BUG_REPORT_URL="https://github.com/archlinuxarm/PKGBUIL>
-LOGO=archlinux-logo
 HOME_URL="https://blackarch.org"
 DOCUMENTATION_URL="https://blackarch.wiki"
 SUPPORT_URL="https://blackarch.org/community.html"
-BUG_REPORT_URL="https://github.com/BlackArch/blackarch/>
+BUG_REPORT_URL="https://github.com/BlackArch/blackarch/issues"
 LOGO=blackarch-logo' > /etc/os-release
 
 pacman -Syu --noconfirm
 pacman -S neofetch --noconfirm
-  clear
-  echo ""
-  echo "installation completed"
-  echo ""
-  echo "Commands package blackarch
+   clear
+   echo ""
+   echo "installation completed"
+   echo ""
+   echo "Commands package blackarch
 - List All Tools BlackArch
 pacman -Sgg | grep blackarch | cut -d' ' -f2 | sort -u
 - List Categories BlackArch
