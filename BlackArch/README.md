@@ -13,12 +13,12 @@
 
 ## Installation
 Copy and paste this commands to Termux
-> apt update
 
 #### Install Arch (Distro)
-> apt install proot-distro
+> apt update
+
 ```
-proot-distro install archlinux
+apt install proot-distro -y ; proot-distro install archlinux
 ```
 
 - Login
