@@ -3,14 +3,14 @@
    echo ""
    echo "Installing BlackArch,."
    echo ""
-pacman-key --init && pacman-key --populate
-pacman -Syu --noconfirm
 
 #Prepare Packages
+pacman-key --init && pacman-key --populate
+pacman -Syu --noconfirm
 pacman -S dialog nano sudo --noconfirm
 
 #Blackarch Packages
-curl -O https://blackarch.org/strap.sh
+wget https://blackarch.org/strap.sh
 echo 26849980b35a42e6e192c6d9ed8c46f0d6d06047 strap.sh | sha1sum -c
 chmod +x strap.sh ; ./strap.sh
 
@@ -29,9 +29,9 @@ pacman -S neofetch --noconfirm
 pacman -Sgg | grep blackarch | cut -d' ' -f2 | sort -u
 - List Categories BlackArch
 pacman -Sg | grep blackarch
-- Install Tools BlackArch
+- Install Tool BlackArch
 pacman -S <tool>
-- Install categories BlackArch
+- Install category BlackArch
 pacman -S blackarch-<category>
 
 You can see again, run 'cat Note'" > ~/Note
