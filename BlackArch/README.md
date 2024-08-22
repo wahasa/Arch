@@ -132,6 +132,12 @@ pacman -S lollypop
 ```
 pacman -S thunderbird
 ```
+- Vim
+```
+pacman -S vim
+```
+
+---
 </details>
 
 - Run VNC Viewer Android
