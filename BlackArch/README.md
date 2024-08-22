@@ -71,6 +71,7 @@ pacman -S blackarch-<category>
 - Fixed Sound Output
 - Install Desktop Arch
 > pacman -Syu
+
 Xfce Desktop
 ```
 pacman -S xfce4 xfce4-goodies gst-libav firefox
@@ -93,5 +94,38 @@ pacman -S mate mate-extra firefox
 ```
 
 - Install Applications
+Blender
+```
+pacman -S blender
+```
+Chromium
+```
+pacman -S chromium
+```
+Firefox
+```
+pacman -S firefox
+```
+Gedit
+```
+pacman -S gedit
+```
+GIMP
+```
+pacman -S gimp
+```
+Inkscape
+```
+pacman -S inkscape
+```
+Lollypop
+```
+pacman -S lollypop
+```
+Thunderbird
+```
+pacman -S thunderbird
+```
+
 - Run VNC Viewer Android
 - Run Termux-x11 Android
