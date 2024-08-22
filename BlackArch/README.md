@@ -66,3 +66,32 @@ pacman -S blackarch-<category>
 > pacman -h : Help all commands.
 
 ---
+
+- Add Username
+- Fixed Sound Output
+- Install Desktop Arch
+> pacman -Syu
+Xfce Desktop
+```
+pacman -S xfce4 xfce4-goodies firefox
+```
+Lxde Desktop
+```
+pacman -S lxde firefox
+```
+Lxqt Desktop
+```
+pacman -S lxqt firefox
+```
+Kde- Desktop
+```
+pacman -S plasma firefox
+```
+Mate Desktop
+```
+pacman -S mate mate-extra firefox
+```
+
+- Install Applications
+- Run VNC Viewer Android
+- Run Termux-x11 Android
