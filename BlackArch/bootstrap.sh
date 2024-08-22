@@ -7,8 +7,7 @@ pacman-key --init && pacman-key --populate
 pacman -Syu --noconfirm
 
 #Prepare Packages
-pacman -S dialog nano --noconfirm
-pacman -S sudo curl neofetch --noconfirm
+pacman -S dialog nano sudo --noconfirm
 
 #Blackarch Packages
 curl -O https://blackarch.org/strap.sh
@@ -20,11 +19,11 @@ rm -rf /etc/os-release
 wget -q https://raw.githubusercontent.com/wahasa/Arch/main/BlackArch/os-release /etc/
 
 pacman -Syu --noconfirm
+pacman -S neofetch --noconfirm
   echo ""
   echo "installation completed"
   echo ""
-  clear
-  echo "Menu BlackArch Linux
+  echo "Commands BlackArch
 - List All Tools BlackArch, run
 pacman -Sgg | grep blackarch | cut -d' ' -f2 | sort -u
 - List Categories BlackArch, run
