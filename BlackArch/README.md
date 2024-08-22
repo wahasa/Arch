@@ -96,6 +96,7 @@ pacman -S plasma firefox
 ```
 pacman -S mate mate-extra firefox
 ```
+---
 </details>
 
 <details>
@@ -147,3 +148,9 @@ pacman -S vim
 
 - Run VNC Viewer Android
 - Run Termux-x11 Android
+</br>
+
+---
+<p align="center">Good Luck</p>
+
+---
