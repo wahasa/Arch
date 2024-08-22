@@ -20,17 +20,18 @@ wget -q https://raw.githubusercontent.com/wahasa/Arch/main/BlackArch/os-release 
 
 pacman -Syu --noconfirm
 pacman -S neofetch --noconfirm
+  clear
   echo ""
   echo "installation completed"
   echo ""
   echo "Commands package blackarch
-- List All Tools BlackArch, run
+- List All Tools BlackArch
 pacman -Sgg | grep blackarch | cut -d' ' -f2 | sort -u
-- List Categories BlackArch, run
+- List Categories BlackArch
 pacman -Sg | grep blackarch
-- Install Tool BlackArch, run
+- Install Tools BlackArch
 pacman -S <tool>
-- Install category BlackArch, run
+- Install categories BlackArch
 pacman -S blackarch-<category>
 
 You can see again, run 'cat Note'" > ~/Note
