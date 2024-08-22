@@ -31,10 +31,11 @@ LOGO=blackarch-logo' > /etc/os-release
 
 pacman -Syu --noconfirm
 pacman -S neofetch --noconfirm
-   clear
    echo ""
    echo "installation completed"
    echo ""
+   sleep 3
+   clear
    echo "Commands package blackarch
 - List All Tools BlackArch
 pacman -Sgg | grep blackarch | cut -d' ' -f2 | sort -u
