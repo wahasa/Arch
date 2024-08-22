@@ -33,16 +33,7 @@ In Arch, run this commands
 > pacman -Syu
 
 ```
-pacman -S wget ; wget https://blackarch.org/strap.sh
-```
-```
-echo 26849980b35a42e6e192c6d9ed8c46f0d6d06047 strap.sh | sha1sum -c
-```
-```
-chmod +x strap.sh ; ./strap.sh
-```
-```
-pacman -Syyu
+pacman -S wget ; wget https://raw.githubusercontent.com/wahasa/Arch/main/BlackArch/bootstrap.sh ; chmod +x bootstrap.sh ; ./bootstrap.sh
 ```
 
 ---
