@@ -28,6 +28,7 @@ apt install proot-distro -y ; proot-distro install archlinux
 - Reinstall : proot-distro reset archlinux
 - Uninstall : proot-distro remove archlinux
 
+---
 #### Install BlackArch (Add-repo)
 In Arch, run this commands
 > pacman -Syu
