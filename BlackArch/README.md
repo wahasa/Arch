@@ -73,11 +73,11 @@ pacman -S blackarch-<category>
 > pacman -Syu
 Xfce Desktop
 ```
-pacman -S xfce4 xfce4-goodies firefox
+pacman -S xfce4 xfce4-goodies gst-libav firefox
 ```
 Lxde Desktop
 ```
-pacman -S lxde firefox
+pacman -S lxde firefox ; mv /usr/bin/lxpolkit /usr/bin/lxpolkit.bak
 ```
 Lxqt Desktop
 ```
