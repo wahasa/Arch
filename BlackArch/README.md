@@ -268,10 +268,9 @@ rm -rf /run/dbus/dbus.pid
 ```
 Save : ctrl + x, click y enter.
 
-Note :
+Note :</br>
 Remove the sign (#) on the desktop you are installing now.
 
----
 ```
 chmod +x /usr/local/bin/vncstart
 ```
