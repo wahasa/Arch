@@ -240,7 +240,7 @@ Add new session</br>
 Swipe the screen from left to right in termux, click 'New Session'.
 
 ---
-In Session 2 (Arch), run this command
+In Session 2 (Arch), run this commands
 ```
 export DISPLAY=:1
 ```
