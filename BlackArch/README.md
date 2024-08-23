@@ -98,6 +98,11 @@ Note :</br>
 <details><summary><b><code>Fixed Sound Output</code></b></summary></br>
 
 * In Termux, run this commands
+> apt update
+
+```
+apt install pulseaudio nano -y
+```
 ```
 nano $PREFIX/bin/blackarch
 ```
@@ -111,10 +116,10 @@ pulseaudio --start \
 ```
 chmod +x $PREFIX/bin/blackarch
 ```
----
-- Login BlackArch
+
+<b>Login BlackArch</b>
 > blackarch
-- Logout BlackArch
+<b>Logout BlackArch</b>
 > exit
 
 * In Arch,run this command
@@ -156,6 +161,8 @@ pacman -S mate mate-extra firefox
 <details><summary><code><b>Install Applications</b></code></summary></br>
 
 In Arch, run this command
+> pacman -Syu
+
 - Blender
 ```
 pacman -S blender
