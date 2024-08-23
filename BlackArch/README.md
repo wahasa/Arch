@@ -219,7 +219,7 @@ pacman -S vim
 ---
 </details>
 
-<details><summary><code><b>Run VNC Viewer Android<details><summary><code><b>
+<details><summary><code><b>Run VNC Viewer Android</b></code></summary></br>
 
 * In Termux, run this commands
 > apt update
@@ -227,6 +227,7 @@ pacman -S vim
 ```
 apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Note/main/tigervnc ; chmod +x tigervnc ; ./tigervnc
 ```
+
 </br>
 Add new session</br>
 Swipe the screen from left to right in termux, click 'New Session'.
