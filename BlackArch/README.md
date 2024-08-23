@@ -238,7 +238,7 @@ apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Note/main/ti
 pacman -S nano
 ```
 ```
-nano /usr/local/bin/termux-x11
+nano /usr/local/bin/vncstart
 ```
 
 Copy Script
