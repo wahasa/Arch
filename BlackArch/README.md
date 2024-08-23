@@ -66,12 +66,34 @@ pacman -S blackarch-<category>
 > pacman -h : Help all commands.
 
 ---
+<details><summary><b><code>Add Username</code></b></summary></br>
 
-- Add Username
+In Arch, run this command
+* Add Username
+```
+useradd <username>
+```
+```
+passwd <username>
+```
+```
+echo "<username>    ALL=(ALL)       ALL" >> /etc/sudoers
+```
+
+* Login Username
+```
+su <username>
+```
+</br>
+Note :</br>
+<username> : Replace with your username.
+
+---
+</details>
+
 - Fixed Sound Output
 
-<details>
-<summary><code><b>Install Desktop Arch</b></code></summary></br>
+<details><summary><code><b>Install Desktop Arch</b></code></summary></br>
 
 In Arch, run this command
 > pacman -Syu
@@ -99,9 +121,9 @@ pacman -S mate mate-extra firefox
 ---
 </details>
 
-<details>
-<summary><code><b>Install Applications</b></code></summary></br>
+<details><summary><code><b>Install Applications</b></code></summary></br>
 
+In Arch, run this command
 - Blender
 ```
 pacman -S blender
