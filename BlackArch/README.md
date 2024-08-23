@@ -223,7 +223,7 @@ pacman -S vim
 
 <details><summary><code><b>Run VNC Viewer Android</b></code></summary></br>
 
-* In Termux, run this commands
+* In Termux, run this command
 > apt update
 
 ```
