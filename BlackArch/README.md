@@ -68,7 +68,7 @@ pacman -S blackarch-<category>
 ---
 <details><summary><b><code>Add Username</code></b></summary></br>
 
-In Arch, run this command
+In Arch, run this commands
 * Add Username
 ```
 useradd <username>
@@ -82,6 +82,12 @@ echo "<username>    ALL=(ALL)       ALL" >> /etc/sudoers
 ```
 su <username>
 ```
+
+* Del Username
+```
+userdel <username>
+```
+
 </br>
 Note :</br>
 (username) : Replace with your username.
@@ -91,8 +97,7 @@ Note :</br>
 
 <details><summary><b><code>Fixed Sound Output</code></b></summary></br>
 
-In Arch, run this commands
-* In Termux
+* In Termux, run this commands
 ```
 nano $PREFIX/bin/blackarch
 ```
@@ -106,17 +111,16 @@ pulseaudio --start \
 ```
 chmod +x $PREFIX/bin/blackarch
 ```
-
-* In Arch
-```
-echo "export PULSE_SERVER=127.0.0.1" >> ~/.bashrc
-```
-
 ---
 - Login BlackArch
 > blackarch
 - Logout BlackArch
 > exit
+
+* In Arch,run this command
+```
+echo "export PULSE_SERVER=127.0.0.1" >> ~/.bashrc
+```
 
 ---
 </details>
