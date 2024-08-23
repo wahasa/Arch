@@ -119,12 +119,14 @@ pulseaudio --start \
 chmod +x $PREFIX/bin/blackarch
 ```
 
+---
 <b>Login BlackArch</b>
 > blackarch
 
 <b>Logout BlackArch</b>
 > exit
 
+---
 * In Arch,run this command
 ```
 echo "export PULSE_SERVER=127.0.0.1" >> ~/.bashrc
