@@ -309,7 +309,9 @@ install termux-x11-nightly -y
 * Start Termux-X11
 
 In Session 1 (termux), run this command
-> vncstart
+```
+vncstart
+```
 
 ---
 Add new session</br>
