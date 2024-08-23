@@ -70,7 +70,7 @@ pacman -S blackarch-<category>
 ---
 <details><summary><b><code>Add Username</code></b></summary></br>
 
-In Arch, run this commands
+In BlackArch, run this commands
 * Add Username
 ```
 useradd <username>
@@ -131,7 +131,7 @@ chmod +x $PREFIX/bin/blackarch
 > exit
 
 ---
-* In Arch,run this commands
+* In BlackArch,run this commands
 ```
 cp /etc/skel/.bashrc .
 ```
