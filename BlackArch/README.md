@@ -272,6 +272,11 @@ Note :
 Remove the sign (#) on the desktop you are installing now.
 
 ---
+```
+chmod +x /usr/local/bin/vncstart
+```
+
+---
 * Start VNC Server
 
 In Session 1 (Termux), run this command
