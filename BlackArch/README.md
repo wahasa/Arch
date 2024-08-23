@@ -21,9 +21,9 @@ Copy and paste this commands to Termux
 apt install proot-distro -y ; proot-distro install archlinux
 ```
 
-- Login Arch
+* Login Arch
 > proot-distro login archlinux
-- Logout Arch
+* Logout Arch
 > exit
 
 ---
@@ -165,8 +165,10 @@ pacman -S plasma firefox
 ```
 pacman -S mate mate-extra firefox
 ```
+
 ---
 </details>
+
 
 <details><summary><code><b>Install Applications</b></code></summary></br>
 
@@ -217,7 +219,25 @@ pacman -S vim
 ---
 </details>
 
-- Run VNC Viewer Android
+<details><summary><code><b>Run VNC Viewer Android<details><summary><code><b>
+
+* In Termux, run this commands
+> apt update
+
+```
+apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Note/main/tigervnc ; chmod +x tigervnc ; ./tigervnc
+```
+</br>
+Add new session</br>
+Swipe the screen from left to right in termux, click 'New Session'.
+
+---
+* In Arch, run this commands
+> pacman -Syu
+
+---
+</details>
+
 - Run Termux-x11 Android
 </br>
 
