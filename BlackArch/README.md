@@ -144,7 +144,7 @@ echo "export PULSE_SERVER=127.0.0.1" >> ~/.bashrc
 
 <details><summary><code><b>Install Desktop Arch</b></code></summary></br>
 
-In Arch, run this command
+In BlackArch, run this command
 > pacman -Syu
 
 - Xfce Desktop
@@ -174,7 +174,7 @@ pacman -S mate mate-extra firefox
 
 <details><summary><code><b>Install Applications</b></code></summary></br>
 
-In Arch, run this command
+In BlackArch, run this command
 > pacman -Syu
 
 - Blender
@@ -232,7 +232,7 @@ apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Note/main/ti
 
 * Start VNC Server
 
-In Session 1 (Termux), run this command
+In Session 1 (termux), run this command
 > vncstart
 
 ---
@@ -240,7 +240,7 @@ Add new session</br>
 Swipe the screen from left to right in termux, click 'New Session'.
 
 ---
-In Session 2 (Arch), run this commands
+In Session 2 (backarch), run this commands
 ```
 export DISPLAY=:1
 ```
@@ -283,10 +283,10 @@ To disconnect VNC Client, click (X) on the right.
 ---
 * Stop VNC Server
 
-In Session 2 (Arch), run this command
+In Session 2 (blackarch), run this command
 > Click Ctrl+c, enter (2X) 
 
-In Session 1 (Termux), run this command
+In Session 1 (termux), run this command
 > vncstop
 
 ---
@@ -308,7 +308,7 @@ install termux-x11-nightly -y
 ---
 * Start Termux-X11
 
-In Session 1 (Termux), run this command
+In Session 1 (termux), run this command
 > vncstart
 
 ---
@@ -316,7 +316,7 @@ Add new session</br>
 Swipe the screen from left to right in termux, click 'New Session'.
 
 ---
-In Session 2 (Arch), run this commands
+In Session 2 (blackrch), run this commands
 ```
 export DISPLAY=:1
 ```
@@ -348,7 +348,7 @@ mate-session
 
 Close app termux-x11
 
-In session 2 (kali), run this command
+In session 2 (blackarch), run this command
 > Click Ctrl+c, enter (2X)
 
 In session 1 (termux), run this command
