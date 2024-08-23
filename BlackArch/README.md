@@ -117,6 +117,8 @@ pulseaudio --start \
     --exit-idle-time=-1
 proot-distro login archlinux --shared-tmp
 ```
+Save : ctrl + x, click y enter.
+
 ```
 chmod +x $PREFIX/bin/blackarch
 ```
@@ -228,13 +230,82 @@ pacman -S vim
 apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Note/main/tigervnc ; chmod +x tigervnc ; ./tigervnc
 ```
 
-</br>
+---
+* In Arch, run this commands
+> pacman -Syu
+
+```
+pacman -S nano
+```
+```
+nano /usr/local/bin/termux-x11
+```
+
+Copy Script
+```
+#!/bin/sh
+export DISPLAY=:1
+rm -rf /run/dbus/dbus.pid
+#export PULSE_SERVER=127.0.0.1
+#dbus-launch $HOME/.vnc/xstartup
+
+# --XFCE-- #
+#startxfce4
+
+# --LXDE-- #
+#startlxde
+
+# --LXQT-- #
+#startlxqt
+
+# --KDE-- #
+#startplasma-x11
+
+# --KDE-- #
+#mate-session
+
+# --END-- #
+```
+Save : ctrl + x, click y enter.
+
+Note :
+Remove the sign (#) on the desktop you are installing now.
+
+---
+* Start VNC Server
+
+In Session 1 (Termux), run this command
+> vncstart
+
+---
 Add new session</br>
 Swipe the screen from left to right in termux, click 'New Session'.
 
 ---
-* In Arch, run this commands
-> pacman -Syu
+In Session 2 (Arch), run this command
+> vncstart
+
+---
+* Open Vnc Viewer
+
+Add (+) VNC Client to connect, fill with :
+
+Address
+> localhost:1 
+
+Name
+> Desktop
+
+To disconnect VNC Client, click (X) on the right.
+
+---
+* Stop VNC Server
+
+In Session 2 (Arch), run this command
+> Click Ctrl+c, enter (2X) 
+
+In Session 1 (Termux), run this command
+> vncstop
 
 ---
 </details>
