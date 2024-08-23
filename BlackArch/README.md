@@ -25,6 +25,8 @@ apt install proot-distro -y ; proot-distro install archlinux
 > proot-distro login archlinux
 - Logout Arch
 > exit
+
+---
 - Reinstall : proot-distro reset archlinux
 - Uninstall : proot-distro remove archlinux
 
