@@ -343,6 +343,7 @@ MATE Desktop
 mate-session
 ```
 
+---
 * Stop Termux-X11
 
 Close app termux-x11
