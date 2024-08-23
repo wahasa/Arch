@@ -21,9 +21,9 @@ Copy and paste this commands to Termux
 apt install proot-distro -y ; proot-distro install archlinux
 ```
 
-- Login
+- Login Arch
 > proot-distro login archlinux
-- Logout
+- Logout Arch
 > exit
 - Reinstall : proot-distro reset archlinux
 - Uninstall : proot-distro remove archlinux
@@ -79,19 +79,47 @@ passwd <username>
 ```
 echo "<username>    ALL=(ALL)       ALL" >> /etc/sudoers
 ```
-
-* Login Username
 ```
 su <username>
 ```
 </br>
 Note :</br>
-<username> : Replace with your username.
+(username) : Replace with your username.
 
 ---
 </details>
 
-- Fixed Sound Output
+<details><summary><b><code>Fixed Sound Output</code></b></summary></br>
+
+In Arch, run this commands
+* In Termux
+```
+nano $PREFIX/bin/blackarch
+```
+```
+#!/bin/bash
+proot-distro login archlinux --shared-tmp
+pulseaudio --start \
+    --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" \
+    --exit-idle-time=-1
+```
+```
+chmod +x $PREFIX/bin/blackarch
+```
+
+* In Arch
+```
+echo "export PULSE_SERVER=127.0.0.1" >> ~/.bashrc
+```
+
+---
+- Login BlackArch
+> blackarch
+- Logout BlackArch
+> exit
+
+---
+</details>
 
 <details><summary><code><b>Install Desktop Arch</b></code></summary></br>
 
