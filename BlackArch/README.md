@@ -230,52 +230,6 @@ pacman -S vim
 apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Note/main/tigervnc ; chmod +x tigervnc ; ./tigervnc
 ```
 
----
-* In Arch, run this commands
-> pacman -Syu
-
-```
-pacman -S nano
-```
-```
-nano /usr/local/bin/vncstart
-```
-
-Copy Script
-```
-#!/bin/sh
-export DISPLAY=:1
-rm -rf /run/dbus/dbus.pid
-#export PULSE_SERVER=127.0.0.1
-#dbus-launch $HOME/.vnc/xstartup
-
-# --XFCE-- #
-#startxfce4
-
-# --LXDE-- #
-#startlxde
-
-# --LXQT-- #
-#startlxqt
-
-# --KDE-- #
-#startplasma-x11
-
-# --KDE-- #
-#mate-session
-
-# --END-- #
-```
-Save : ctrl + x, click y enter.
-
-Note :</br>
-Remove the sign (#) on the desktop you are installing now.
-
-```
-chmod +x /usr/local/bin/vncstart
-```
-
----
 * Start VNC Server
 
 In Session 1 (Termux), run this command
@@ -287,7 +241,31 @@ Swipe the screen from left to right in termux, click 'New Session'.
 
 ---
 In Session 2 (Arch), run this command
-> vncstart
+```
+export DISPLAY=:1
+```
+
+---
+XFCE Desktop
+```
+startxfce4
+```
+LXDE Desktop
+```
+startlxde
+```
+LXQT Desktop
+```
+startlxqt
+```
+KDE- Desktop
+```
+startplasma-x11
+```
+MATE Desktop
+```
+mate-session
+```
 
 ---
 * Open Vnc Viewer
