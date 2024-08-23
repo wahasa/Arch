@@ -294,7 +294,7 @@ In Session 1 (termux), run this command
 
 <details><summary><code><b>Run Termux-x11 Android</b></code></summary></br>
 
-* App Termux-x11
+* Install App Termux-x11
 
 - [x] [Link Download](https://github.com/termux/termux-x11/releases)
 
