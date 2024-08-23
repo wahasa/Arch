@@ -112,10 +112,10 @@ nano $PREFIX/bin/blackarch
 Copy Script
 ```
 #!/bin/bash
-proot-distro login archlinux --shared-tmp
 pulseaudio --start \
     --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" \
     --exit-idle-time=-1
+proot-distro login archlinux --shared-tmp
 ```
 ```
 chmod +x $PREFIX/bin/blackarch
@@ -129,7 +129,10 @@ chmod +x $PREFIX/bin/blackarch
 > exit
 
 ---
-* In Arch,run this command
+* In Arch,run this commands
+```
+cp /etc/skel/.bashrc .
+```
 ```
 echo "export PULSE_SERVER=127.0.0.1" >> ~/.bashrc
 ```
