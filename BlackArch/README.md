@@ -292,7 +292,67 @@ In Session 1 (Termux), run this command
 ---
 </details>
 
-- Run Termux-x11 Android
+<details><summary><code><b>Run Termux-x11 Android</b></code></summary></br>
+
+* App Termux-x11
+
+- [x] [Link Download](https://github.com/termux/termux-x11/releases)
+
+* In Termux, run this command
+> apt update
+
+```
+install termux-x11-nightly -y
+```
+
+---
+* Start Termux-X11
+
+In Session 1 (Termux), run this command
+> vncstart
+
+---
+Add new session</br>
+Swipe the screen from left to right in termux, click 'New Session'.
+
+---
+In Session 2 (Arch), run this commands
+```
+export DISPLAY=:1
+```
+
+---
+XFCE Desktop
+```
+startxfce4
+```
+LXDE Desktop
+```
+startlxde
+```
+LXQT Desktop
+```
+startlxqt
+```
+KDE- Desktop
+```
+startplasma-x11
+```
+MATE Desktop
+```
+mate-session
+```
+
+* Stop Termux-X11
+
+Close app termux-x11
+
+In session 2 (kali), run this command
+> Click Ctrl+c, enter (2X)
+
+In session 1 (termux), run this command
+> pkill -f com.termux.x11
+</details>
 </br>
 
 ---
