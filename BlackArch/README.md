@@ -106,6 +106,8 @@ apt install pulseaudio nano -y
 ```
 nano $PREFIX/bin/blackarch
 ```
+
+Copy Script
 ```
 #!/bin/bash
 proot-distro login archlinux --shared-tmp
@@ -119,6 +121,7 @@ chmod +x $PREFIX/bin/blackarch
 
 <b>Login BlackArch</b>
 > blackarch
+
 <b>Logout BlackArch</b>
 > exit
 
