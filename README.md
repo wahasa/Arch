@@ -31,34 +31,6 @@ apt install proot-distro -y ; proot-distro install archlinux
 - Uninstall : proot-distro remove archlinux
 
 ---
-#### Install BlackArch (Add-repo)
-In Arch, run this command
-> pacman -Syu
-
-```
-pacman -S wget ; wget https://raw.githubusercontent.com/wahasa/Arch/main/BlackArch/bootstrap.sh ; chmod +x bootstrap.sh ; ./bootstrap.sh
-```
-
----
-<b> Commands package blackarch</b>
-- List all tools blackarch
-```
-pacman -Sgg | grep blackarch | cut -d' ' -f2 | sort -u
-```
-- List tools categories blackarch
-```
-pacman -Sg | grep blackarch
-```
-- Install tools blackarch
-```
-pacman -S <name_tool>
-```
-- Install tools category blackarch
-```
-pacman -S blackarch-<category>
-```
-
----
 <b>Basic commands Arch</b>
 > pacman -Sy : Update list package.</br>
 > pacman -Syu : Upgrade package.</br>
@@ -70,7 +42,7 @@ pacman -S blackarch-<category>
 ---
 <details><summary><b><code>Add Username</code></b></summary></br>
 
-In BlackArch, run this commands
+In Arch, run this commands
 ```
 pacman -S sudo
 ```
@@ -109,7 +81,7 @@ Note :</br>
 apt install pulseaudio nano -y
 ```
 ```
-nano $PREFIX/bin/blackarch
+nano $PREFIX/bin/arch
 ```
 
 Copy Script
@@ -123,18 +95,18 @@ proot-distro login archlinux --shared-tmp
 Save : ctrl + x, click y enter.
 
 ```
-chmod +x $PREFIX/bin/blackarch
+chmod +x $PREFIX/bin/arch
 ```
 
 ---
-<b>Login BlackArch</b>
-> blackarch
+<b>Login Arch</b>
+> arch
 
-<b>Logout BlackArch</b>
+<b>Logout Arch</b>
 > exit
 
 ---
-* In BlackArch,run this commands
+* In Arch,run this commands
 ```
 cp /etc/skel/.bashrc .
 ```
@@ -147,7 +119,7 @@ echo "export PULSE_SERVER=127.0.0.1" >> ~/.bashrc
 
 <details><summary><code><b>Install Desktop Arch</b></code></summary></br>
 
-In BlackArch, run this command
+In Arch, run this command
 > pacman -Syu
 
 - Xfce Desktop
@@ -177,7 +149,7 @@ pacman -S mate mate-extra firefox
 
 <details><summary><code><b>Install Applications</b></code></summary></br>
 
-In BlackArch, run this command
+In Arch, run this command
 > pacman -Syu
 
 - Blender
@@ -245,7 +217,7 @@ Add new session</br>
 Swipe the screen from left to right in termux, click 'New Session'.
 
 ---
-In Session 2 (backarch), run this commands
+In Session 2 (arch), run this commands
 ```
 export DISPLAY=:1
 ```
@@ -288,7 +260,7 @@ To disconnect VNC Client, click (X) on the right.
 ---
 * Stop VNC Server
 
-In Session 2 (blackarch), run this command
+In Session 2 (arch), run this command
 > Click Ctrl+c, enter (2X) 
 
 In Session 1 (termux), run this command
@@ -323,7 +295,7 @@ Add new session</br>
 Swipe the screen from left to right in termux, click 'New Session'.
 
 ---
-In Session 2 (blackrch), run this commands
+In Session 2 (arch), run this commands
 ```
 export DISPLAY=:1
 ```
@@ -355,7 +327,7 @@ mate-session
 
 Close app termux-x11
 
-In session 2 (blackarch), run this command
+In session 2 (arch), run this command
 > Click Ctrl+c, enter (2X)
 
 In session 1 (termux), run this command
