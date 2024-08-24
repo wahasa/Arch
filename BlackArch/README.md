@@ -302,7 +302,7 @@ In Session 1 (termux), run this command
 > apt update
 
 ```
-install termux-x11-nightly -y
+apt install termux-x11-nightly -y
 ```
 
 ---
