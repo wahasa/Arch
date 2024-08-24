@@ -36,7 +36,7 @@ pacman -S neofetch --noconfirm
    echo ""
    sleep 3
    clear
-echo "Commands package blackarch
+   echo "Commands package blackarch
 - List All Tools BlackArch
 pacman -Sgg | grep blackarch | cut -d' ' -f2 | sort -u
 - List Categories BlackArch
@@ -47,6 +47,9 @@ pacman -S <tool>
 pacman -S blackarch-<category>
 
 You can see again, run 'cat Note'" > ~/Note
-
-cat ~/Note
-rm strap.sh bootstrap.sh
+   cat ~/Note
+   echo ""
+   rm strap.sh bootstrap.sh
+##
+## Script edited by WaHaSa.
+##
