@@ -71,6 +71,9 @@ pacman -S blackarch-<category>
 <details><summary><b><code>Add Username</code></b></summary></br>
 
 In BlackArch, run this commands
+```
+pacman -S sudo
+```
 * Add Username
 ```
 useradd <username>
