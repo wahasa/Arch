@@ -233,7 +233,9 @@ apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Note/main/ti
 * Start VNC Server
 
 In Session 1 (termux), run this command
-> termux-x11 :1
+```
+vncstart
+```
 
 ---
 Add new session</br>
@@ -310,7 +312,7 @@ apt install termux-x11-nightly -y
 
 In Session 1 (termux), run this command
 ```
-vncstart
+termux-x11 :1
 ```
 
 ---
