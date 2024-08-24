@@ -47,7 +47,7 @@ pacman -Sgg | grep blackarch | cut -d' ' -f2 | sort -u
 ```
 - List tools categories blackarch
 ```
-sudo pacman -Sg | grep blackarch
+pacman -Sg | grep blackarch
 ```
 - Install tools blackarch
 ```
