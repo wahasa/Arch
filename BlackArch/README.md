@@ -233,7 +233,7 @@ apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Note/main/ti
 * Start VNC Server
 
 In Session 1 (termux), run this command
-> vncstart
+> termux-x11 :1
 
 ---
 Add new session</br>
