@@ -323,7 +323,7 @@ Add new session</br>
 Swipe the screen from left to right in termux, click 'New Session'.
 
 ---
-In Session 2 (blackrch), run this commands
+In Session 2 (blackarch), run this commands
 ```
 export DISPLAY=:1
 ```
