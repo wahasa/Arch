@@ -288,7 +288,7 @@ To disconnect VNC Client, click (X) on the right.
 ---
 * Stop VNC Server
 
-In Session 2 (blackarch), run this command
+In session 2 (blackarch), run this command
 > Click Ctrl+c, enter (2X) 
 
 In Session 1 (termux), run this command
