@@ -119,8 +119,10 @@ echo "export PULSE_SERVER=127.0.0.1" >> ~/.bashrc
 
 <details><summary><code><b>Install Desktop Arch</b></code></summary></br>
 
-In Arch, run this command
-> pacman -Syu
+In Arch, run this commands
+```
+pacman-key --init ; pacman-key --populate ; pacman -Syu --noconfirm
+```
 
 - Xfce Desktop
 ```
