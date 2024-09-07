@@ -35,10 +35,10 @@ apt install proot-distro -y ; proot-distro install archlinux
 In Arch, run this command
 
 ```
-pacman-key --init ; pacman-key --populate
+pacman-key --init ; pacman-key --populate ; pacman -Syu --noconfirm
 ```
 ```
-pacman -Syu --noconfirm ; pacman -S dialog wget nano sudo --noconfirm
+pacman -S dialog wget nano sudo --noconfirm
 ```
 ```
 wget https://blackarch.org/strap.sh
@@ -68,6 +68,10 @@ BUG_REPORT_URL="https://github.com/BlackArch/blackarch/issues"
 LOGO=blackarch-logo
 ```
 Save : ctrl + x, click y enter.
+
+```
+pacman -Syyu --noconfirm
+```
 
 ---
 <b> Commands package blackarch</b>
