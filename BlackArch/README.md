@@ -33,11 +33,41 @@ apt install proot-distro -y ; proot-distro install archlinux
 ---
 #### Install BlackArch (Add-repo)
 In Arch, run this command
-> pacman -Syu
 
 ```
-pacman -S wget ; wget https://raw.githubusercontent.com/wahasa/Arch/main/BlackArch/bootstrap.sh ; chmod +x bootstrap.sh ; ./bootstrap.sh
+pacman-key --init ; pacman-key --populate
 ```
+```
+pacman -Syu --noconfirm ; pacman -S dialog wget nano sudo --noconfirm
+```
+```
+wget https://blackarch.org/strap.sh
+```
+```
+echo 26849980b35a42e6e192c6d9ed8c46f0d6d06047 strap.sh | sha1sum -c
+```
+```
+chmod +x strap.sh ; ./strap.sh
+```
+```
+nano /etc/os-release
+```
+
+Edit OS
+```
+NAME="BlackArch Linux"
+PRETTY_NAME="BlackArch Linux"
+ID=blackarch
+ID_LIKE=arch
+BUILD_ID=rolling
+ANSI_COLOR="38;2;23;147;209"
+HOME_URL="https://blackarch.org"
+DOCUMENTATION_URL="https://blackarch.wiki"
+SUPPORT_URL="https://blackarch.org/community.html"
+BUG_REPORT_URL="https://github.com/BlackArch/blackarch/issues"
+LOGO=blackarch-logo
+```
+Save : ctrl + x, click y enter.
 
 ---
 <b> Commands package blackarch</b>
@@ -64,7 +94,7 @@ pacman -S blackarch-<category>
 > pacman -Syu : Upgrade package.</br>
 > pacman -Ss (pkg) : Search package.</br>
 > pacman -S (pkg) : Install package.</br>
-> pacman -R (pkg) : Delete pkg.</br>
+> pacman -R (pkg) : Delete package.</br>
 > pacman -h : Help all commands.
 
 ---
@@ -173,7 +203,6 @@ pacman -S mate mate-extra firefox
 
 ---
 </details>
-
 
 <details><summary><code><b>Install Applications</b></code></summary></br>
 
