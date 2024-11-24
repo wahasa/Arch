@@ -103,10 +103,10 @@ EOM
 echo "export PULSE_SERVER=127.0.0.1" >> $folder/etc/skel/.bashrc
 echo 'bash .manjaro' > $PREFIX/bin/$linux
 chmod +x $PREFIX/bin/$linux
-#cat > $folder/etc/pacman.d/mirrorlist <<'EOL'
-#Manjaro Repositories
-#Server = https://mirrors.cicku.me/manjaro/arm-stable/$repo/$arch
-#EOL
+cat > $folder/etc/pacman.d/mirrorlist <<'EOL'
+#Arch Repositories
+Server = http://mirror.archlinuxarm.org/$arch/$repo
+EOL
      clear
      echo ""
      echo "Updating Arch,.."
