@@ -30,7 +30,7 @@ if [ "$first" != 1 ];then
 	       wget -q --show-progress "https://github.com/manjaro-arm/rootfs/releases/download/${build}/Manjaro-ARM-${archurl}-latest.tar.gz" -O $tarball
 	 fi
          mkdir -p $folder
-	       mkdir -p $folder/binds
+	 mkdir -p $folder/binds
          echo "Decompressing Rootfs, please be patient."
          proot --link2symlink tar -xpf ~/${tarball} -C ~/$folder/ --exclude='dev'||:
     fi
