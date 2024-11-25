@@ -100,20 +100,17 @@ EOM
      echo "Removing image for some space"
      #rm $tarball
      echo ""
+echo "" > $folder/root/.hushlogin
 echo "export PULSE_SERVER=127.0.0.1" >> $folder/etc/skel/.bashrc
 echo 'bash .arch' > $PREFIX/bin/$linux
 chmod +x $PREFIX/bin/$linux
-cat > $folder/etc/pacman.d/mirrorlist <<'EOL'
-#Arch Repositories
-Server = http://mirror.archlinuxarm.org/$arch/$repo
-EOL
      clear
      echo ""
      echo "Updating Arch,.."
      echo ""
 echo "#!/bin/bash
-touch ~/.hushlogin
-echo "nameserver 8.8.8.8" > /etc/resolv.conf
+echo "nameserver 8.8.8.8" > resolv.conf
+rm -rf /etc/resolv.conf ; mv resolv.conf /etc/
 pacman-key --init ; pacman-key --populate
 pacman -Syyu ; cp /etc/skel/.bashrc .
 pacman -S dialog nano sudo ncurses tzdata --noconfirm
