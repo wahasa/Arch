@@ -3,7 +3,7 @@ pkg install root-repo x11-repo
 pkg install proot xz-utils neofetch pulseaudio -y
 #termux-setup-storage
 arch=2024
-build=20241118
+build=2024
    echo ""
    neofetch --ascii_distro Arch -L
 folder=arch-fs
@@ -27,7 +27,7 @@ if [ "$first" != 1 ];then
                *)
                        echo "Unknown Architecture."; exit 1 ;;
                esac
-	       wget -q --show-progress "https://github.com/manjaro-arm/rootfs/releases/download/${build}/Manjaro-ARM-${archurl}-latest.tar.gz" -O $tarball
+	       wget -q --show-progress "https://fl.us.mirror.archlinuxarm.org/os/ArchLinuxARM-${archurl}-latest.tar.gz" -O $tarball
 	 fi
          mkdir -p $folder
 	 mkdir -p $folder/binds
