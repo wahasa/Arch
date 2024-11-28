@@ -18,16 +18,17 @@ if [ "$first" != 1 ];then
                case `dpkg --print-architecture` in
                aarch64)
                        archurl="aarch64" ;;
-               #arm*)
-                       #archurl="armhfp" ;;
+               arm*)
+                       archurl="armv7" ;;
                #i386)
 		       #archurl="x86" ;;
-               #x86_64)
-                       #archurl="x86_64" ;;
+               x86_64)
+                       archurl="x86_64" ;;
                *)
                        echo "Unknown Architecture."; exit 1 ;;
                esac
 	       wget -q --show-progress "https://fl.us.mirror.archlinuxarm.org/os/ArchLinuxARM-${archurl}-latest.tar.gz" -O $tarball
+	       wget -q --show-progress "https://archive.archlinux.org/iso/2024.04.01/archlinux-bootstrap-${archurl}.tar.gz" -O $tarball
 	 fi
          mkdir -p $folder
 	 mkdir -p $folder/binds
@@ -99,7 +100,6 @@ EOM
      chmod -R 755 $folder
      echo "Removing image for some space"
      #rm $tarball
-echo ""
 echo "" > $folder/root/.hushlogin
 echo "export PULSE_SERVER=127.0.0.1" >> $folder/etc/skel/.bashrc
 echo 'bash .arch' > $PREFIX/bin/$linux
