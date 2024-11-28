@@ -2,10 +2,10 @@
 pkg install root-repo x11-repo
 pkg install proot xz-utils neofetch pulseaudio -y
 #termux-setup-storage
+echo ""
 arch=2024
 build=2024
-   echo ""
-   neofetch --ascii_distro Arch -L
+neofetch --ascii_distro Arch -L
 folder=arch-fs
 if [ -d "$folder" ]; then
          first=1
@@ -34,12 +34,12 @@ if [ "$first" != 1 ];then
          echo "Decompressing Rootfs, please be patient."
          proot --link2symlink tar -xpf ~/${tarball} -C ~/$folder/ --exclude='dev'||:
     fi
+    echo ""
     echo "localhost" > $folder/etc/hostname
     echo "127.0.0.1 localhost" > $folder/etc/hosts
     echo "nameserver 8.8.8.8" > $folder/etc/resolv.conf
 bin=.arch
 linux=arch
-echo ""
 echo "Writing launch script"
 cat > $bin <<- EOM
 #!/data/data/com.termux/files/usr/bin/bash
@@ -99,30 +99,30 @@ EOM
      chmod -R 755 $folder
      echo "Removing image for some space"
      #rm $tarball
-     echo ""
+echo ""
 echo "" > $folder/root/.hushlogin
 echo "export PULSE_SERVER=127.0.0.1" >> $folder/etc/skel/.bashrc
 echo 'bash .arch' > $PREFIX/bin/$linux
 chmod +x $PREFIX/bin/$linux
      clear
      echo ""
-     echo "Updating Arch,.."
+     echo "Updating Package,.."
      echo ""
 echo "#!/bin/bash
 echo "nameserver 8.8.8.8" > resolv.conf
 rm -rf /etc/resolv.conf ; mv resolv.conf /etc/
 pacman-key --init ; pacman-key --populate
-pacman -Syyu ; cp /etc/skel/.bashrc .
+pacman -Syyu --noconfirm ; cp /etc/skel/.bashrc .
 pacman -S dialog nano sudo ncurses tzdata --noconfirm
 ln -s /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 rm -rf ~/.bash_profile
 exit" > $folder/root/.bash_profile
-     bash $bin
+bash $bin
      clear
      echo ""
-     echo "You can login to Arch with 'arch' script next time"
+     echo "You can login to Linux with 'arch' script next time"
      echo ""
      #rm arch.sh
 #
 ## Script edited by 'WaHaSa', Script revision-5.
-##
+#
