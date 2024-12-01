@@ -101,8 +101,8 @@ EOM
      echo "Removing image for some space"
      #rm $tarball
 echo ""
-echo "#Arch Repositories
-Server = https://mirror.archlinuxarm.org/$arch/$repo" > $folder/etc/pacman.d/mirrorlist
+echo '#Arch Repositories
+Server = https://mirror.archlinuxarm.org/$arch/$repo' > $folder/etc/pacman.d/mirrorlist
 echo "" > $folder/root/.hushlogin
 echo "export PULSE_SERVER=127.0.0.1" >> $folder/etc/skel/.bashrc
 echo 'bash .arch' > $PREFIX/bin/$linux
