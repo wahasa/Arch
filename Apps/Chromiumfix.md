@@ -3,7 +3,7 @@
 
 ---
 ### Fixed Chromium on Arch
-<img src="https://raw.githubusercontent.com/wahasa/Manjaro/refs/heads/main/Patch/Chromium.jpg">
+<img src="https://raw.githubusercontent.com/wahasa/Arch/refs/heads/main/Patch/Chromium.jpg">
 
 * Install Chromium
 > pacman -S chromium
