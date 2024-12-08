@@ -21,7 +21,7 @@ Copy and paste this commands to Termux
 
 Rootfs : Arm64, Armhf, Amd64
 ```
-wget https://raw.githubusercontent.com/wahasa/Manjaro/refs/heads/main/Install/arch.sh ; chmod +x arch.sh ; ./arch.sh
+wget https://raw.githubusercontent.com/wahasa/Arch/refs/heads/main/Install/arch.sh ; chmod +x arch.sh ; ./arch.sh
 ```
 </details>
 
