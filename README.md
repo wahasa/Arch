@@ -14,7 +14,7 @@
 Copy and paste this commands to Termux
 > apt update
 
-<details><summary><b><code>Install Manjaro</code></b></summary></br>
+<details><summary><b><code>Install Arch</code></b></summary></br>
 
 > apt install wget
 - [x] Arch (Latest-release)
