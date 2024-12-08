@@ -1,34 +1,45 @@
 <p align="center">My Channel</br><b>
-| <a href="https://discord.gg/GCehyym">Discord</a> | <a href="https://youtube.com/channel/UC3sLb7eZCu72iv3G1yUhUHQ">YouTube</a> |</b></p>
+| <a href="https://discord.gg/GCehyym">Discord</a> | <a href="https://youtube.com/@layargeser">YouTube</a> |</b></p>
 
 ---
-### Arch on Termux Android
-![Arch](https://raw.githubusercontent.com/wahasa/Arch/main/Arch.jpg)
+## Arch on Termux Android
+<img src="https://raw.githubusercontent.com/wahasa/Arch/refs/heads/main/Patch/Arch.jpg">
 
----
-• Install Apps on Android
+* Install Apps on Android
 - [x] [Termux](https://play.google.com/store/apps/details?id=com.termux)
-- [x] [Vnc Viewer](https://play.google.com/store/apps/details?id=com.realvnc.viewer.android)
-- [x] [Termux X11](https://github.com/termux/termux-x11/releases)
+- [x] [Termux-x11](https://github.com/termux/termux-x11/releases)
 
-## Installation
+### Installation
+
 Copy and paste this commands to Termux
-
-#### Install Arch (Distro)
 > apt update
 
-```
-apt install proot-distro -y ; proot-distro install archlinux
-```
+<details><summary><b><code>Install Manjaro</code></b></summary></br>
 
-* Login Arch
-> proot-distro login archlinux
-* Logout Arch
-> exit
+> apt install wget
+- [x] Arch (Latest-release)
+
+Rootfs : Arm64, Armhf, Amd64
+```
+wget https://raw.githubusercontent.com/wahasa/Manjaro/refs/heads/main/Install/arch.sh ; chmod +x arch.sh ; ./arch.sh
+```
+</details>
 
 ---
-- Reinstall : proot-distro reset archlinux
-- Uninstall : proot-distro remove archlinux
+* Login Arch
+```
+arch
+```
+
+* Logout Arch
+```
+exit
+```
+
+* Remove Arch
+```
+chmod -R 775 arch-fs ; rm -rf arch-fs .arch $PREFIX/bin/arch
+```
 
 ---
 <b>Basic commands Arch</b>
@@ -37,303 +48,57 @@ apt install proot-distro -y ; proot-distro install archlinux
 > pacman -Ss (pkg) : Search package.</br>
 > pacman -S (pkg) : Install package.</br>
 > pacman -R (pkg) : Delete package.</br>
-> pacman -h : Help all commands.
 
 ---
-<details><summary><b><code>Add Username</code></b></summary></br>
+### Install Desktop Environments
 
 In Arch, run this commands
-```
-pacman -S sudo
-```
-* Add Username
-```
-useradd <username>
-```
-```
-passwd <username>
-```
-```
-echo "<username>    ALL=(ALL)       ALL" >> /etc/sudoers
-```
-```
-su <username>
-```
-
-* Del Username
-```
-userdel <username>
-```
-
-</br>
-Note :</br>
-(username) : Replace with your username.
-
----
-</details>
-
-<details><summary><b><code>Fixed Sound Output</code></b></summary></br>
-
-* In Termux, run this commands
-> apt update
-
-```
-apt install pulseaudio nano -y
-```
-```
-nano $PREFIX/bin/arch
-```
-
-Copy Script
-```
-#!/bin/bash
-pulseaudio --start \
-    --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" \
-    --exit-idle-time=-1
-proot-distro login archlinux --shared-tmp
-```
-Save : ctrl + x, click y enter.
-
-```
-chmod +x $PREFIX/bin/arch
-```
-
----
-<b>Login Arch</b>
-> arch
-
-<b>Logout Arch</b>
-> exit
-
----
-* In Arch,run this commands
-```
-cp /etc/skel/.bashrc .
-```
-```
-echo "export PULSE_SERVER=127.0.0.1" >> ~/.bashrc
-```
-
----
-</details>
-
-<details><summary><code><b>Install Desktop Arch</b></code></summary></br>
-
-In Arch, run this commands
-```
-pacman-key --init ; pacman-key --populate ; pacman -Syu --noconfirm
-```
-
-- Xfce Desktop
-```
-pacman -S xfce4 xfce4-goodies gst-libav firefox
-```
-- Lxde Desktop
-```
-pacman -S lxde firefox ; mv /usr/bin/lxpolkit /usr/bin/lxpolkit.bak
-```
-- Lxqt Desktop
-```
-pacman -S lxqt firefox
-```
-- Kde- Desktop
-```
-pacman -S plasma firefox
-```
-- Mate Desktop
-```
-pacman -S mate mate-extra firefox
-```
-
----
-</details>
-
-<details><summary><code><b>Install Applications</b></code></summary></br>
-
-In Arch, run this command
 > pacman -Syu
 
-- Blender
-```
-pacman -S blender
-```
-- Firefox
-```
-pacman -S firefox
-```
-- Gedit
-```
-pacman -S gedit
-```
-- GIMP
-```
-pacman -S gimp
-```
-- Inkscape
-```
-pacman -S inkscape
-```
-- Kdenlive
-```
-pacman -S kdenlive
-```
-- Krita
-```
-pacman -S krita
-```
-- Lollypop
-```
-pacman -S lollypop
-```
-- Thunderbird
-```
-pacman -S thunderbird
-```
-- Vim
-```
-pacman -S vim
-```
+<details><summary><b><code>Xfce Desktop</code></b></summary></br>
 
----
+```
+pacman -S xfce4 xfce4-goodies network-manager-applet engrampa firefox pulseaudio gst-libav dbus
+```
 </details>
 
-<details><summary><code><b>Run VNC Viewer Android</b></code></summary></br>
-
-* In Termux, run this command
-> apt update
+<details><summary><b><code>Lxde Desktop</code></b></summary></br>
 
 ```
-apt install wget -y ; wget https://raw.githubusercontent.com/wahasa/Note/main/tigervnc ; chmod +x tigervnc ; ./tigervnc
+pacman -S lxde network-manager-applet firefox pulseaudio dbus ; mv /usr/bin/lxpolkit /usr/bin/lxpolkit.bak
 ```
-
-* Start VNC Server
-
-In Session 1 (termux), run this command
-```
-vncstart
-```
-
----
-Add new session</br>
-Swipe the screen from left to right in termux, click 'New Session'.
-
----
-In Session 2 (arch), run this commands
-```
-export DISPLAY=:1
-```
-
----
-XFCE Desktop
-```
-startxfce4
-```
-LXDE Desktop
-```
-startlxde
-```
-LXQT Desktop
-```
-startlxqt
-```
-KDE- Desktop
-```
-startplasma-x11
-```
-MATE Desktop
-```
-mate-session
-```
-
----
-* Open Vnc Viewer
-
-Add (+) VNC Client to connect, fill with :
-
-Address
-> localhost:1 
-
-Name
-> Desktop
-
-To disconnect VNC Client, click (X) on the right.
-
----
-* Stop VNC Server
-
-In Session 2 (arch), run this command
-> Click Ctrl+c, enter (2X) 
-
-In Session 1 (termux), run this command
-> vncstop
-
----
 </details>
 
-<details><summary><code><b>Run Termux-x11 Android</b></code></summary></br>
-
-* Install App Termux-x11
-
-- [x] [Link Download](https://github.com/termux/termux-x11/releases)
-
-* In Termux, run this command
-> apt update
+<details><summary><b><code>Lxqt Desktop</code></b></summary></br>
 
 ```
-apt install termux-x11-nightly -y
+pacman -S lxqt xscreensaver firefox pulseaudio dbus
 ```
-
----
-* Start Termux-X11
-
-In Session 1 (termux), run this command
-```
-termux-x11 :1
-```
-
----
-Add new session</br>
-Swipe the screen from left to right in termux, click 'New Session'.
-
----
-In Session 2 (arch), run this commands
-```
-export DISPLAY=:1
-```
-
----
-XFCE Desktop
-```
-startxfce4
-```
-LXDE Desktop
-```
-startlxde
-```
-LXQT Desktop
-```
-startlxqt
-```
-KDE- Desktop
-```
-startplasma-x11
-```
-MATE Desktop
-```
-mate-session
-```
-
----
-* Stop Termux-X11
-
-Close app termux-x11
-
-In session 2 (arch), run this command
-> Click Ctrl+c, enter (2X)
-
-In session 1 (termux), run this command
-> pkill -f com.termux.x11
 </details>
+
+<details><summary><b><code>Kde- Desktop</code></b></summary></br>
+
+```
+pacman -S plasma kio-extras firefox pulseaudio dbus
+```
+</details>
+
+---
+Feature
+- [x] Fixed Sound Output
+- [x] Access to Sdcard
+- [x] Access to Termux-x11
+- [x] Add New Username     | [Click Here >](https://github.com/wahasa/Arch/blob/main/Patch/AddUser.md#add-username-on-fedora)
+- [x] Fixed Browser Crash  | [Click Here >](https://github.com/wahasa/Arch/blob/main/Apps/Firefoxfix.md#fixed-firefox-on-fedora)
+- [x] Install Applications | [Click Here >](https://github.com/wahasa/Arch/tree/main/Apps#list-applications)
+
+Visit problems now in : [Issues](https://github.com/wahasa/Arch/issues)
+
+---
+### Run Desktop Environments
+- [x] With Termux-X11  | [Click Here >](https://github.com/wahasa/Arch/blob/main/Patch/Termux-X11.md#termux-x11-on-fedora)
+- [x] With Rvnc Viewer | [Click Here >](https://github.com/wahasa/Arch/blob/main/Patch/RvncViewer.md#rvnc-viewer-on-fedora)
+- [x] With Bvnc Viewer | [Click Here >](https://github.com/wahasa/Arch/blob/main/Patch/BvncViewer.md#bvnc-viewer-on-fedora)
 </br>
 
 ---
