@@ -77,7 +77,6 @@ ID_LIKE=arch
 BUILD_ID=rolling
 ANSI_COLOR="38;2;23;147;209"
 HOME_URL="https://blackarch.org"
-DOCUMENTATION_URL="https://blackarch.wiki"
 SUPPORT_URL="https://blackarch.org/community.html"
 BUG_REPORT_URL="https://github.com/BlackArch/blackarch/issues"
 LOGO=blackarch-logo
@@ -117,7 +116,10 @@ pacman -S blackarch-<category>
 > pacman -h : Help all commands.
 
 ---
+Feature
+- [x] [Install Desktop Environments](https://github.com/wahasa/Arch/tree/main#install-desktop-environments)
 
+- [x] [Run Desktop Environments](https://github.com/wahasa/Arch/tree/main#run-desktop-environments)
 </br>
 
 ---
