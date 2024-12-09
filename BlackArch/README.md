@@ -59,11 +59,16 @@ echo f14b5ebd544cc29ca8160fb1ff6cd79793eb42e1 strap.sh | sha1sum -c
 ```
 chmod +x strap.sh ; ./strap.sh
 ```
+
+- Edit Os-release
+```
+rm -rf /etc/os-release
+```
 ```
 nano /etc/os-release
 ```
 
-Edit OS
+Copy Script
 ```
 NAME="BlackArch Linux"
 PRETTY_NAME="BlackArch Linux"
