@@ -2,7 +2,7 @@
 | <a href="https://discord.gg/GCehyym">Discord</a> | <a href="https://youtube.com/@layargeser">YouTube</a> |</b></p>
 
 ---
-### Manjaro Distro on Termux Android
+### Arch Distro on Termux Android
 <img src="https://raw.githubusercontent.com/wahasa/Arch/refs/heads/main/Distro/Arch-Distro.jpg">
 
 * Install Apps on Android
