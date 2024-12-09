@@ -48,13 +48,8 @@ chmod -R 775 arch-fs ; rm -rf arch-fs .arch $PREFIX/bin/arch
 > Install BlackArch
 
 In Arch, run this commands
+> pacman -S wget
 
-```
-pacman-key --init ; pacman-key --populate ; pacman -Syu --noconfirm
-```
-```
-pacman -S dialog wget nano sudo --noconfirm
-```
 ```
 wget https://blackarch.org/strap.sh
 ```
