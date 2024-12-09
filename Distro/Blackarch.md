@@ -35,7 +35,8 @@ apt install proot-distro -y ; proot-distro install archlinux
 ---
 - [x] Add Repository
 
-#### Install BlackArch
+> Install BlackArch
+
 In Arch, run this commands
 
 ```
