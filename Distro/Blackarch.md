@@ -49,7 +49,7 @@ pacman -S dialog wget nano sudo --noconfirm
 wget https://blackarch.org/strap.sh
 ```
 ```
-echo 26849980b35a42e6e192c6d9ed8c46f0d6d06047 strap.sh | sha1sum -c
+echo f14b5ebd544cc29ca8160fb1ff6cd79793eb42e1 strap.sh | sha1sum -c
 ```
 ```
 chmod +x strap.sh ; ./strap.sh
