@@ -110,3 +110,136 @@ pacman -S blackarch-<category>
 > pacman -h : Help all commands.
 
 ---
+Feature
+
+<details><summary><b><code>Fixed Sound Output</code></b></summary></br>
+
+<b>In Termux, run this commands</b>
+> apt update
+
+- Edit Script
+```
+apt install pulseaudio nano -y
+```
+```
+nano $PREFIX/bin/blackarch
+```
+
+- Copy Script
+```
+#!/bin/bash
+pulseaudio --start \
+    --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" \
+    --exit-idle-time=-1
+proot-distro login archlinux --shared-tmp
+```
+Save : ctrl + x, click y enter.
+
+- Activate script
+```
+chmod +x $PREFIX/bin/blackarch
+```
+
+---
+- Login BlackArch
+> blackarch
+
+- Logout BlackArch
+> exit
+
+- Remove BlackArch
+```
+rm $PREFIX/bin/blackarch ; pd remove archlinux
+```
+
+---
+<b>In Linux, run this command</b>
+```
+echo "export PULSE_SERVER=127.0.0.1" >> ~/.bashrc
+```
+
+---
+</details>
+
+<details><summary><b><code>Add New Username</code></b></summary></br>
+
+<b>In Linux, run this commands</b>
+> pacman -S sudo
+
+- Add Username
+```
+useradd <username>
+```
+```
+passwd <username>
+```
+```
+echo "<username>    ALL=(ALL)       ALL" >> /etc/sudoers
+```
+
+</br>
+Note :</br>
+(username) : Replace with your username.
+
+---
+- Login Username
+```
+su <username>
+```
+
+- Logout Username
+```
+exit
+```
+
+- Remove Username
+```
+userdel <username>
+```
+
+---
+<b>In Termux, run this commands</b>
+> pacman -S nano
+
+- Edit Script
+```
+nano $PREFIX/bin/blackarch
+```
+</br>
+
+> proot-distro login archlinux --shared-tmp
+
+To
+
+```
+proot-distro login --user <username> archlinux --shared-tmp
+```
+Save : ctrl + x, click y enter.
+
+</br>
+Note :</br>
+(username) : Replace with your username.
+
+---
+- Login BlackArch
+> blackarch
+
+- Logout BlackArch
+> exit
+
+- Remove BlackArch
+```
+rm $PREFIX/bin/blackarch ; pd remove archlinux
+```
+</details>
+
+---
+- [x] [Install Desktop Environments](https://github.com/wahasa/Arch/tree/main#install-desktop-environments)
+
+- [x] [Run Desktop Environments](https://github.com/wahasa/Arch/tree/main#run-desktop-environments)
+</br>
+
+---
+<p align="center">Good Luck</p>
+
+---
