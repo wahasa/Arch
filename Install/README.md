@@ -1,13 +1,13 @@
-<b>Manjaro Site</b>
+<b>Arch Site</b>
 - https://archlinux.org
 
-<b>Manjaro Release</b>
+<b>Arch Release</b>
 - https://archlinux.org/releng/releases
 
-<b>Manjaro Repository</b>
+<b>Arch Repository</b>
 - https://fl.us.mirror.archlinuxarm.org
 
-<b>Manjaro Rootfs</b>
+<b>Arch Rootfs</b>
 
 (tar.xz)</br>
 - https://github.com/termux/proot-distro/releases
