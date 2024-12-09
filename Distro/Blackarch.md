@@ -34,3 +34,79 @@ apt install proot-distro -y ; proot-distro install archlinux
 
 ---
 - [x] Add Repository
+
+#### Install BlackArch
+In Arch, run this commands
+
+```
+pacman-key --init ; pacman-key --populate ; pacman -Syu --noconfirm
+```
+```
+pacman -S dialog wget nano sudo --noconfirm
+```
+```
+wget https://blackarch.org/strap.sh
+```
+```
+echo 26849980b35a42e6e192c6d9ed8c46f0d6d06047 strap.sh | sha1sum -c
+```
+```
+chmod +x strap.sh ; ./strap.sh
+```
+
+- Edit Os-release
+```
+rm -rf /etc/os-release
+```
+```
+nano /etc/os-release
+```
+
+Copy Script
+```
+NAME="BlackArch Linux"
+PRETTY_NAME="BlackArch Linux"
+ID=blackarch
+ID_LIKE=arch
+BUILD_ID=rolling
+ANSI_COLOR="38;2;23;147;209"
+HOME_URL="https://blackarch.org"
+SUPPORT_URL="https://blackarch.org/community.html"
+BUG_REPORT_URL="https://github.com/BlackArch/blackarch/issues"
+LOGO=blackarch-logo
+```
+Save : ctrl + x, click y enter.
+
+```
+pacman -Syyu --noconfirm
+```
+
+---
+<b> Commands package blackarch</b>
+- List all tools blackarch
+```
+pacman -Sgg | grep blackarch | cut -d' ' -f2 | sort -u
+```
+- List tools categories blackarch
+```
+pacman -Sg | grep blackarch
+```
+- Install tools blackarch
+```
+pacman -S <name_tool>
+```
+- Install tools category blackarch
+```
+pacman -S blackarch-<category>
+```
+
+---
+<b>Basic commands Arch</b>
+> pacman -Sy : Update list package.</br>
+> pacman -Syu : Upgrade package.</br>
+> pacman -Ss (pkg) : Search package.</br>
+> pacman -S (pkg) : Install package.</br>
+> pacman -R (pkg) : Delete package.</br>
+> pacman -h : Help all commands.
+
+---
