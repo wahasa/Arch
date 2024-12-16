@@ -54,7 +54,7 @@ In Arch, run this commands
 wget https://blackarch.org/strap.sh
 ```
 ```
-echo f14b5ebd544cc29ca8160fb1ff6cd79793eb42e1 strap.sh | sha1sum -c
+echo bbf0a0b838aed0ec05fff2d375dd17591cbdf8aa strap.sh | sha1sum -c
 ```
 ```
 chmod +x strap.sh ; ./strap.sh
