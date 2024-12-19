@@ -4,7 +4,7 @@ pkg install proot xz-utils neofetch pulseaudio -y
 #termux-setup-storage
 echo ""
 arch=2024
-build=2024
+build=rolling
 neofetch --ascii_distro Arch -L
 folder=arch-fs
 if [ -d "$folder" ]; then
