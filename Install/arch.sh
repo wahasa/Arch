@@ -22,18 +22,20 @@ if [ "$first" != 1 ];then
                        archurl="armv7" ;;
                #i386)
 		       #archurl="x86" ;;
-               x86_64)
-                       archurl="x86_64" ;;
+               #x86_64)
+                       #archurl="x86_64" ;;
                *)
                        echo "Unknown Architecture."; exit 1 ;;
                esac
-	       wget -q --show-progress "https://fl.us.mirror.archlinuxarm.org/os/ArchLinuxARM-${archurl}-latest.tar.gz" -O $tarball
-	       wget -q --show-progress "https://archive.archlinux.org/iso/2024.04.01/archlinux-bootstrap-${archurl}.tar.gz" -O $tarball
+	       wget -q --show-progress https://fl.us.mirror.archlinuxarm.org/os/ArchLinuxARM-${archurl}-latest.tar.gz
+	       #wget -q --show-progress "https://fl.us.mirror.archlinuxarm.org/os/ArchLinuxARM-${archurl}-latest.tar.gz" -O $tarball
+	       #wget -q --show-progress "https://archive.archlinux.org/iso/2024.04.01/archlinux-bootstrap-${archurl}.tar.gz" -O $tarball
 	 fi
          mkdir -p $folder
 	 mkdir -p $folder/binds
          echo "Decompressing Rootfs, please be patient."
-         proot --link2symlink tar -xpf ~/${tarball} -C ~/$folder/ --exclude='dev'||:
+	 proot --link2symlink tar -xpf ~/ArchLinuxARM-* -C ~/$folder/ --exclude='dev' ||:
+         #proot --link2symlink tar -xpf ~/${tarball} -C ~/$folder/ --exclude='dev' ||:
     fi
     echo ""
     echo "localhost" > $folder/etc/hostname
